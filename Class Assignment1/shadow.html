@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Shadows Demo</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#eef2f7;
+        padding:40px;
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:40px;
+        color:#333;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:30px;
+    }
+
+    .card{
+        background:white;
+        padding:25px;
+        border-radius:15px;
+        text-align:center;
+        transition:.4s;
+    }
+
+    /* -----------------------------
+       1. Simple Box Shadow
+    ----------------------------- */
+    .shadow1{
+        box-shadow:5px 5px 10px gray;
+    }
+
+    /* -----------------------------
+       2. Soft Shadow
+    ----------------------------- */
+    .shadow2{
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* -----------------------------
+       3. Colored Shadow
+    ----------------------------- */
+    .shadow3{
+        box-shadow:0 0 20px royalblue;
+    }
+
+    /* -----------------------------
+       4. Multiple Shadows
+    ----------------------------- */
+    .shadow4{
+        box-shadow:
+            0 4px 8px rgba(0,0,0,.2),
+            0 8px 20px rgba(0,0,0,.15);
+    }
+
+    /* -----------------------------
+       5. Hover Shadow
+    ----------------------------- */
+    .shadow5{
+        box-shadow:0 3px 8px rgba(0,0,0,.2);
+    }
+
+    .shadow5:hover{
+        transform:translateY(-8px);
+        box-shadow:0 15px 30px rgba(0,0,0,.4);
+    }
+
+    /* -----------------------------
+       Text Shadow
+    ----------------------------- */
+
+    .text-shadow{
+        font-size:32px;
+        color:#ff5722;
+        text-shadow:3px 3px 5px gray;
+    }
+
+    .glow{
+        font-size:32px;
+        color:white;
+        background:#111;
+        padding:10px;
+        border-radius:8px;
+        text-shadow:
+            0 0 5px cyan,
+            0 0 10px cyan,
+            0 0 20px cyan;
+    }
+
+    /* -----------------------------
+       Image Shadow
+    ----------------------------- */
+
+    img{
+        width:180px;
+        border-radius:12px;
+        box-shadow:0 10px 20px rgba(0,0,0,.4);
+    }
+
+    /* -----------------------------
+       Button Shadow
+    ----------------------------- */
+
+    button{
+        background:#4CAF50;
+        color:white;
+        border:none;
+        padding:15px 30px;
+        font-size:18px;
+        border-radius:8px;
+        cursor:pointer;
+        box-shadow:0 6px #2E7D32;
+        transition:.2s;
+    }
+
+    button:active{
+        transform:translateY(6px);
+        box-shadow:0 0 #2E7D32;
+    }
+
+</style>
+
+</head>
+<body>
+
+<h1>CSS Shadow Examples</h1>
+
+<div class="container">
+
+    <div class="card shadow1">
+        <h2>Simple Shadow</h2>
+        <p>box-shadow: 5px 5px 10px gray;</p>
+    </div>
+
+    <div class="card shadow2">
+        <h2>Soft Shadow</h2>
+        <p>box-shadow: 0 8px 20px rgba(0,0,0,.2);</p>
+    </div>
+
+    <div class="card shadow3">
+        <h2>Colored Shadow</h2>
+        <p>Blue glowing shadow.</p>
+    </div>
+
+    <div class="card shadow4">
+        <h2>Multiple Shadows</h2>
+        <p>Two shadows combined.</p>
+    </div>
+
+    <div class="card shadow5">
+        <h2>Hover Shadow</h2>
+        <p>Move mouse over me!</p>
+    </div>
+
+    <div class="card">
+        <h2 class="text-shadow">Text Shadow</h2>
+        <p>Shadow behind text.</p>
+    </div>
+
+    <div class="card">
+        <h2 class="glow">Glow Effect</h2>
+        <p style="margin-top:20px;">Neon glowing text.</p>
+    </div>
+
+    <div class="card">
+        <h2>Image Shadow</h2>
+        <br>
+        <img src="https://picsum.photos/200/150" alt="Sample Image">
+    </div>
+
+    <div class="card">
+        <h2>Button Shadow</h2>
+        <br><br>
+        <button>Click Me</button>
+    </div>
+
+</div>
+
+</body>
+</html>
